@@ -38,7 +38,7 @@ AbsoulteError=0.0
 index1=1
 index2=1
 count=0
-for i in range(1,len(origLines)-1):
+for i in range(0,len(origLines)):
 #for i in range(1)
 	origLine 	= origLines[i].rstrip()
 	nnLine 		= nnLines[i].rstrip()

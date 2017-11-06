@@ -1,6 +1,6 @@
 #!/bin/bash
 source ../../shortvariable/Common.sh
-BaseDirectory=/if22/ml2au/AxBenchCPU/axbench/applications/inversek2j/ 
+BaseDirectory=${SharedPath}inversek2j/ 
 cd ${BaseDirectory}AxSrc 
 [ -e inversek2jAx ] && rm  inversek2jAx 
 g++ -std=c++11 inversek2jAx.cpp kinematics.cpp  ../../shortvariable/shortVariable.cpp  -o inversek2jAx  

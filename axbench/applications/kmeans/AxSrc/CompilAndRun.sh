@@ -1,6 +1,6 @@
 #!/bin/bash
 source ../../shortvariable/Common.sh
-BaseDirectory=/if22/ml2au/AxBenchCPU/axbench/applications/kmeans/ 
+BaseDirectory=${SharedPath}kmeans/ 
 cd ${BaseDirectory}AxSrc 
 [ -e kmeansAx ] && rm  kmeansAx 
 g++ -std=c++11 kmeansAx.c distance.c rgbimage.c segmentation.c  ../../shortvariable/shortVariable.cpp  -o kmeansAx  

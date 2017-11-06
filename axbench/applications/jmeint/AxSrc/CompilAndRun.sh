@@ -1,6 +1,6 @@
 #!/bin/bash
 source ../../shortvariable/Common.sh
-BaseDirectory=/if22/ml2au/AxBenchCPU/axbench/applications/jmeint/ 
+BaseDirectory=${SharedPath}jmeint/ 
 cd ${BaseDirectory}AxSrc 
 
 g++ -std=c++11 jmeint.cpp ../../shortvariable/shortVariable.cpp tritri.cpp -o jmeintAx

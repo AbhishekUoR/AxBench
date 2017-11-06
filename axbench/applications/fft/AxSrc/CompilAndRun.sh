@@ -1,6 +1,7 @@
 #!/bin/bash
 source ../../shortvariable/Common.sh
-BaseDirectory=/if22/ml2au/AxBenchCPU/axbench/applications/fft/ 
+#BaseDirectory=/if22/ml2au/AxBenchCPU/axbench/applications/fft/ 
+BaseDirectory=${SharedPath}fft/ 
 cd ${BaseDirectory}AxSrc 
 [ -e fftAx ] && rm  fftAx
 #echo NumberOfBits	AverageRelativeError	MaximumAbsoluteError

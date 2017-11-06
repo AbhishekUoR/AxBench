@@ -1,7 +1,7 @@
-#!/bin/bash
-BaseDirectory=/if22/ml2au/AxBenchCPU/axbench/applications/Oldsobel/ 
-cd ${BaseDirectory}AxSrc 
+#!/bin/bash 
 source ../../shortvariable/Common.sh
+BaseDirectory=${SharedPath}Oldsobel/ 
+cd ${BaseDirectory}AxSrc
 [ -e sobelAx ] && rm  sobelAx 
 g++ -w -std=c++11 convolution.cpp sobelAx.cpp rgb_image.cpp  ../../shortvariable/shortVariable.cpp -lboost_regex  -o sobelAx  
 if [ $? -ne 0 ]; then

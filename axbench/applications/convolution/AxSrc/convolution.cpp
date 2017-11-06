@@ -119,7 +119,8 @@ int main(int argc, char* argv[])
         StepSize4=       pow(2,atoi(argv[20]));
         NumberOfSamplingItr= SamplingItrUnit * fileNamingArg ;
         #endif
-//	std::cout<<"file name is "<<outImageName<<NumberOfBits<<" "<<Max1<<" "<<Max2<<" "<<Max3<<" "<<inputSign<<" "<<std::endl;
+//	std::cout<<"n1 is "<<n1<<" n2 is "<<n2<<" f1 is :"<< f1<<" f2 is :"<<f2 <<" p1 is "<<p1<<" p2 is "<<p2 <<" s1 is : "<<s1<<"  s2 is :"<<s2<<" "<<std::endl;
+//	std::cout<<"file name is "<<outImageName<<" "<<Max1<<" "<<Max2<<" "<<Max3<<" "<<inputSign<<" "<<std::endl;
 	setTheMasks(fileNamingArg, &posMask, &negMask);		
 	n1=n1+p1;
 	n2=n2+p2;

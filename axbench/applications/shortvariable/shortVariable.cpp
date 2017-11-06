@@ -164,10 +164,30 @@ void SetMaxAndMin(float value, float* MaxAdr, float* MinAdr, int * numBits ,doub
 void setTheMasks( int numBit, unsigned int * pMask, unsigned int * nMask){
 	if(numBit>0)
 	{
-		for (int ti=1; ti<=numBit;ti++)
-		{
-			*pMask=*pMask+ pow(2,32-ti);
+	#ifdef ByteVsExponent
+		if(numBit==1)
+		{ 
+			for (int ti=1; ti<=24;ti++)
+			{	
+				*pMask=*pMask+ pow(2,32-ti);
+			}
 		}
+		if(numBit==2)
+		{
+                        for (int ti=1; ti<=32;ti++)
+                        {
+				if(ti!=9)
+				{
+                               		 *pMask=*pMask+ pow(2,32-ti);
+				}
+                        }
+		}
+	#else
+                for (int ti=1; ti<=numBit;ti++)
+                {
+                        *pMask=*pMask+ pow(2,32-ti);
+                }		
+	#endif
 		//TODO fix Negmask: neg mask should only consider negativity of the exponent
 		for (int ti=0; ti<(32-numBit);ti++)
 		{

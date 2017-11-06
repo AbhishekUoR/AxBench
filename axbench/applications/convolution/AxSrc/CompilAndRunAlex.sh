@@ -1,6 +1,6 @@
 #!/bin/bash
-BaseDirectory=/if22/ml2au/AxBenchCPU/axbench/applications/convolution/ 
 source ../../shortvariable/Common.sh
+BaseDirectory=${SharedPath}convolution/ 
 cd ${BaseDirectory}AxSrc 
 [ -e convolutionAx ] && rm  convolutionAx 
  g++ -static -std=c++11  ../../shortvariable/shortVariable.cpp convolution.cpp   -o convolutionAx  

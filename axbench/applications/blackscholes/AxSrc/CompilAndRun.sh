@@ -1,6 +1,6 @@
 #!/bin/bash
 source ../../shortvariable/Common.sh
-BaseDirectory=/if22/ml2au/AxBenchCPU/axbench/applications/blackscholes/ 
+BaseDirectory=${SharedPath}blackscholes/ 
 cd ${BaseDirectory}AxSrc 
 [ -e blackscholesAx ] && rm  blackscholesAx
 
